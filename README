@@ -1,0 +1,6 @@
+Jurassic Panner is a 20 in 8 out flocking algorithm panner for puredata.
+
+It makes use of the the Boids extention which based on Simon Fraser's implementation of Craig Reynolds' Boids algorithm. Boids is a bird flight and animal flock simulator. It is based on the same algorithm which was used in Jurassic Park for the herding dinosaurs. It can be downloaded from here: 
+https://puredata.info/downloads/boids/releases/1.1.1
+
+To use create a new patch within the subdirectory or point your patch towards the jurassic_panner folder and create a [jurassic_panner] object box. The object box requires a name to function correctly eg [jurassic_panner mypanner].
