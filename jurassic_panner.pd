@@ -1,31 +1,31 @@
-#N canvas 483 83 1728 1240 10;
+#N canvas 91 22 1754 1387 10;
 #X declare -path boids;
 #X obj 1058 590 s \$1-boidsettings;
 #X obj 417 65 r \$1-boidsettings;
 #X obj 417 111 route 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 19;
 #X obj 417 41 metro 20;
-#X obj 417 21 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 417 21 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 206 637 gemhead;
-#X obj 206 733 translateXYZ;
-#X floatatom 229 688 5 0 0 0 - - -;
-#X floatatom 252 711 5 0 0 0 - - -;
+#X obj 198 721 gemhead;
+#X obj 198 817 translateXYZ;
+#X floatatom 221 772 5 0 0 0 - - -;
+#X floatatom 244 795 5 0 0 0 - - -;
 #X obj 1285 94 gemwin;
 #X msg 1304 68 destroy \, reset;
 #X msg 862 796 flyrect 4 4 -4 -4;
-#X floatatom 109 639 5 0 0 0 - - -;
-#X floatatom 402 638 5 0 0 0 - - -;
+#X floatatom 101 723 5 0 0 0 - - -;
+#X floatatom 394 722 5 0 0 0 - - -;
 #X obj 417 89 boids2d 20;
 #X obj 18 -111 declare -path boids;
 #X obj 417 136 boid 0;
-#X msg 211 881 attractpt \$1 \$2;
-#X obj 206 803 circle 0.1;
-#X obj 211 856 pack f f;
-#X msg 221 780 draw line;
+#X msg 203 965 attractpt \$1 \$2;
+#X obj 198 887 circle 0.1;
+#X obj 203 940 pack f f;
+#X msg 213 864 draw line;
 #X obj 111 -4 loadbang;
-#X obj 221 757 loadbang;
-#X obj 211 904 s \$1-boidsettings;
+#X obj 213 841 loadbang;
+#X obj 203 988 s \$1-boidsettings;
 #X obj 433 158 boid 1;
 #X obj 449 182 boid 2;
 #X obj 466 205 boid 3;
@@ -45,26 +45,26 @@
 #X obj 694 156 boid 17;
 #X obj 711 180 boid 18;
 #X obj 727 203 boid 19;
-#X obj 206 661 color 0.6 0.6 0.6;
+#X obj 198 745 color 0.6 0.6 0.6;
 #X msg 1285 43 create \, 1 \, color 0.25 0.25 0.25;
 #X msg 111 18 color 85 85 85;
-#X obj 24 1087 outlet~;
+#X obj 23 1239 outlet~;
 #X obj 18 -40 boidpan 0 \$1;
-#X obj 24 967 catch~ \$1-out1;
-#X obj 172 1087 outlet~;
-#X obj 320 1086 outlet~;
-#X obj 461 1086 outlet~;
-#X obj 605 1086 outlet~;
-#X obj 745 1086 outlet~;
-#X obj 885 1086 outlet~;
-#X obj 1021 1087 outlet~;
-#X obj 172 967 catch~ \$1-out2;
-#X obj 320 966 catch~ \$1-out3;
-#X obj 461 966 catch~ \$1-out4;
-#X obj 605 966 catch~ \$1-out5;
-#X obj 745 966 catch~ \$1-out6;
-#X obj 885 966 catch~ \$1-out7;
-#X obj 1021 967 catch~ \$1-out8;
+#X obj 23 1119 catch~ \$1-out1;
+#X obj 171 1239 outlet~;
+#X obj 319 1238 outlet~;
+#X obj 460 1238 outlet~;
+#X obj 604 1238 outlet~;
+#X obj 744 1238 outlet~;
+#X obj 884 1238 outlet~;
+#X obj 1020 1239 outlet~;
+#X obj 171 1119 catch~ \$1-out2;
+#X obj 319 1118 catch~ \$1-out3;
+#X obj 460 1118 catch~ \$1-out4;
+#X obj 604 1118 catch~ \$1-out5;
+#X obj 744 1118 catch~ \$1-out6;
+#X obj 884 1118 catch~ \$1-out7;
+#X obj 1020 1119 catch~ \$1-out8;
 #X obj 18 -82 inlet~;
 #X obj 101 -82 inlet~;
 #X obj 183 -82 inlet~;
@@ -123,57 +123,57 @@
 #X obj 178 198 expr ($f1 / 500) * -8 + 4;
 #X obj 178 220 clip -4 4;
 #X msg 133 268 values \$1 \$2;
-#X obj 102 302 cnv 15 700 320 empty empty empty 20 12 0 14 -228856
+#X obj 102 302 cnv 15 700 380 empty empty empty 20 12 0 14 -228856
 -66577 0;
-#X obj 111 310 grid grid1 300 -4 4 300 -4 4 1 0.1 0.1 10 10 269 452
+#X obj 111 311 grid grid1 300 -4 4 300 -4 4 1 0.1 0.1 10 10 257 457
 ;
-#X obj 200 363 cnv 15 15 15 empty \$0-speaker1pos 1 4 7 0 14 -228856
+#X obj 200 364 cnv 15 15 15 empty \$0-speaker1pos 1 4 7 0 14 -228856
 -66577 0;
-#X obj 305 363 cnv 15 15 15 empty \$0-speaker2pos 2 4 7 0 14 -228856
+#X obj 305 364 cnv 15 15 15 empty \$0-speaker2pos 2 4 7 0 14 -228856
 -66577 0;
-#X obj 155 424 cnv 15 15 15 empty \$0-speaker3pos 3 4 7 0 14 -228856
+#X obj 155 425 cnv 15 15 15 empty \$0-speaker3pos 3 4 7 0 14 -228856
 -66577 0;
-#X obj 350 424 cnv 15 15 15 empty \$0-speaker4pos 4 4 7 0 14 -228856
+#X obj 350 425 cnv 15 15 15 empty \$0-speaker4pos 4 4 7 0 14 -228856
 -66577 0;
-#X obj 155 483 cnv 15 15 15 empty \$0-speaker5pos 5 4 7 0 14 -228856
+#X obj 155 484 cnv 15 15 15 empty \$0-speaker5pos 5 4 7 0 14 -228856
 -66577 0;
-#X obj 350 483 cnv 15 15 15 empty \$0-speaker6pos 6 4 7 0 14 -228856
+#X obj 350 484 cnv 15 15 15 empty \$0-speaker6pos 6 4 7 0 14 -228856
 -66577 0;
-#X obj 200 544 cnv 15 15 15 empty \$0-speaker7pos 7 4 7 0 14 -228856
+#X obj 200 545 cnv 15 15 15 empty \$0-speaker7pos 7 4 7 0 14 -228856
 -66577 0;
-#X obj 305 544 cnv 15 15 15 empty \$0-speaker8pos 8 4 7 0 14 -228856
+#X obj 305 545 cnv 15 15 15 empty \$0-speaker8pos 8 4 7 0 14 -228856
 -66577 0;
-#X obj 423 309 cnv 15 180 95 empty empty Attraction 5 12 0 14 -191407
+#X obj 423 310 cnv 15 180 95 empty empty Attraction 5 12 0 14 -191407
 -66577 0;
-#X obj 424 415 cnv 15 180 200 empty empty Speed 5 12 0 14 -191407 -66577
+#X obj 424 416 cnv 15 180 200 empty empty Speed 5 12 0 14 -191407 -66577
 0;
-#X obj 613 449 cnv 15 180 95 empty empty Walls 5 12 0 14 -191407 -66577
+#X obj 613 450 cnv 15 180 95 empty empty Walls 5 12 0 14 -191407 -66577
 0;
-#X obj 613 309 cnv 15 180 130 empty empty Neighbours 5 12 0 14 -191407
+#X obj 613 310 cnv 15 180 130 empty empty Neighbours 5 12 0 14 -191407
 -66577 0;
-#X obj 436 452 hsl 128 15 0 8 0 0 \$1-maxspeed \$1-setmaxspeed Max_Speed:
+#X obj 436 453 hsl 128 15 0 8 0 0 \$1-maxspeed \$1-setmaxspeed Max_Speed:
 -2 -8 0 10 -262144 -1 -1 2381 1;
-#X obj 436 485 hsl 128 15 0 8 0 0 \$1-minspeed \$1-setminspeed Min_Speed:
+#X obj 436 486 hsl 128 15 0 8 0 0 \$1-minspeed \$1-setminspeed Min_Speed:
 -2 -8 0 10 -262144 -1 -1 1905 1;
-#X obj 436 380 hsl 128 15 0 8 0 0 \$1-center \$1-setcenter Centering_Instinct:
--2 -8 0 10 -262144 -1 -1 1587 1;
-#X obj 436 347 hsl 128 15 0 8 0 0 \$1-attract \$1-setattract Attraction_Strength:
--2 -8 0 10 -262144 -1 -1 3175 1;
-#X obj 625 349 hsl 128 15 0 8 0 0 \$1-match \$1-setmatch Neighbour_Speed_Match:
+#X obj 436 381 hsl 128 15 0 8 0 0 \$1-center \$1-setcenter Centering_Instinct:
+-2 -8 0 10 -262144 -1 -1 2163 1;
+#X obj 436 348 hsl 128 15 0 8 0 0 \$1-attract \$1-setattract Attraction_Strength:
+-2 -8 0 10 -262144 -1 -1 4675 1;
+#X obj 625 350 hsl 128 15 0 8 0 0 \$1-match \$1-setmatch Neighbour_Speed_Match:
 -2 -8 0 10 -262144 -1 -1 476 1;
-#X obj 625 385 hsl 128 15 0 8 0 0 \$1-avoid \$1-setavoid Neighbour_Avoidance:
+#X obj 625 386 hsl 128 15 0 8 0 0 \$1-avoid \$1-setavoid Neighbour_Avoidance:
 -2 -8 0 10 -262144 -1 -1 5556 1;
-#X obj 625 487 hsl 128 15 0 8 0 0 \$1-repel \$1-setrepel Wall_Avoidance:
+#X obj 625 488 hsl 128 15 0 8 0 0 \$1-repel \$1-setrepel Wall_Avoidance:
 -2 -8 0 10 -262144 -1 -1 5556 1;
-#X obj 625 520 hsl 128 15 0 8 0 0 \$1-edgedist \$1-setedgedist Wall_Distance_Vision:
+#X obj 625 521 hsl 128 15 0 8 0 0 \$1-edgedist \$1-setedgedist Wall_Distance_Vision:
 -2 -8 0 10 -262144 -1 -1 4762 1;
-#X obj 436 520 hsl 128 15 0 8 0 0 \$1-speed \$1-setspeed Overall_Speed
+#X obj 436 521 hsl 128 15 0 8 0 0 \$1-speed \$1-setspeed Overall_Speed
 -2 -8 0 10 -262144 -1 -1 4762 1;
-#X obj 436 553 hsl 128 15 0 8 0 0 \$1-inertia \$1-setinertia Inertia:
+#X obj 436 554 hsl 128 15 0 8 0 0 \$1-inertia \$1-setinertia Inertia:
 -2 -8 0 10 -262144 -1 -1 7144 1;
-#X obj 436 590 hsl 128 15 0 8 0 0 \$1-accel \$1-setaccel Acceleration:
+#X obj 436 591 hsl 128 15 0 8 0 0 \$1-accel \$1-setaccel Acceleration:
 -2 -8 0 10 -262144 -1 -1 3969 1;
-#X obj 625 418 hsl 128 15 0 8 0 0 \$1-prefdist \$1-setprefdist Dist_From_Neighbours:
+#X obj 625 419 hsl 128 15 0 8 0 0 \$1-prefdist \$1-setprefdist Dist_From_Neighbours:
 -2 -8 0 10 -262144 -1 -1 2381 1;
 #X obj 862 471 s \$1-setspeed;
 #X obj 862 518 s \$1-setinertia;
@@ -200,18 +200,18 @@
 #X msg 862 543 2.5;
 #X msg 862 589 1.5;
 #X obj 862 -4 loadbang;
-#X floatatom 759 349 4 0 0 0 - #1-match #1-noout;
-#X floatatom 759 385 4 0 0 0 - #1-avoid #1-noout;
-#X floatatom 759 418 4 0 0 0 - #1-prefdist #1-noout;
-#X floatatom 759 487 4 0 0 0 - #1-repel #1-noout;
-#X floatatom 759 520 4 0 0 0 - #1-edgedist #1-noout;
-#X floatatom 570 452 4 0 0 0 - #1-maxspeed #1-noout;
-#X floatatom 570 485 4 0 0 0 - #1-minspeed #1-noout;
-#X floatatom 570 520 4 0 0 0 - #1-speed #1-noout;
-#X floatatom 570 553 4 0 0 0 - #1-inertia #1-noout;
-#X floatatom 570 590 4 0 0 0 - #1-accel #1-noout;
-#X floatatom 570 347 4 0 0 0 - #1-attract #1-noout;
-#X floatatom 570 380 4 0 0 0 - #1-center #1-noout;
+#X floatatom 759 350 4 0 0 0 - #1-match #1-noout;
+#X floatatom 759 386 4 0 0 0 - #1-avoid #1-noout;
+#X floatatom 759 419 4 0 0 0 - #1-prefdist #1-noout;
+#X floatatom 759 488 4 0 0 0 - #1-repel #1-noout;
+#X floatatom 759 521 4 0 0 0 - #1-edgedist #1-noout;
+#X floatatom 570 453 4 0 0 0 - #1-maxspeed #1-noout;
+#X floatatom 570 486 4 0 0 0 - #1-minspeed #1-noout;
+#X floatatom 570 521 4 0 0 0 - #1-speed #1-noout;
+#X floatatom 570 554 4 0 0 0 - #1-inertia #1-noout;
+#X floatatom 570 591 4 0 0 0 - #1-accel #1-noout;
+#X floatatom 570 348 4 0 0 0 - #1-attract #1-noout;
+#X floatatom 570 381 4 0 0 0 - #1-center #1-noout;
 #X obj 862 819 s \$1-boidsettings;
 #X msg 1058 -4 neighbors \$1;
 #X msg 1058 42 maxspeed \$1;
@@ -238,51 +238,51 @@
 #X obj 1058 443 r \$1-inertia;
 #X obj 1058 492 r \$1-accel;
 #X obj 1058 541 r \$1-prefdist;
-#X obj 613 555 cnv 15 180 60 empty empty empty 20 12 0 14 -191407 -66577
+#X obj 613 556 cnv 15 180 60 empty empty empty 20 12 0 14 -191407 -66577
 0;
-#X obj 768 595 tgl 15 0 \$1-boidsonoff \$1-setboids Flocking_On_Off:
--100 7 0 10 -262144 -1 -1 1 1;
-#X obj 647 595 tgl 15 0 \$1-gemonoff \$1-gemload Gem: -25 7 0 10 -262144
--1 -1 1 1;
+#X obj 768 596 tgl 15 0 \$1-boidsonoff \$1-setboids Flocking_On_Off:
+-100 7 0 10 -262144 -1 -1 0 1;
+#X obj 647 596 tgl 15 0 \$1-gemonoff \$1-gemload Gem: -25 7 0 10 -262144
+-1 -1 0 1;
 #X msg 862 844 neighbors 4;
 #X obj 862 865 s \$1-boidsettings;
-#X obj 624 574 hsl 128 15 0 1 0 0 \$1-outputgain \$1-setoutputgain
-Gain: -2 -8 0 10 -262144 -1 -1 6350 1;
-#X floatatom 758 574 4 0 0 0 - #1-outputgain #1-noout;
+#X obj 624 575 hsl 128 15 0 1 0 0 \$1-outputgain \$1-setoutputgain
+Gain: -2 -8 0 10 -262144 -1 -1 0 1;
+#X floatatom 758 575 4 0 0 0 - #1-outputgain #1-noout;
 #X msg 862 19 0.5;
 #X obj 862 41 s \$1-setoutputgain;
-#X obj 39 991 r \$1-outputgain;
-#X msg 39 1014 \$1 20;
-#X obj 39 1038 vline~;
-#X obj 24 1062 *~;
-#X obj 187 992 r \$1-outputgain;
-#X msg 187 1015 \$1 20;
-#X obj 187 1039 vline~;
-#X obj 172 1063 *~;
-#X obj 335 991 r \$1-outputgain;
-#X msg 335 1014 \$1 20;
-#X obj 335 1038 vline~;
-#X obj 320 1062 *~;
-#X obj 476 993 r \$1-outputgain;
-#X msg 476 1016 \$1 20;
-#X obj 476 1040 vline~;
-#X obj 461 1064 *~;
-#X obj 620 989 r \$1-outputgain;
-#X msg 620 1012 \$1 20;
-#X obj 620 1036 vline~;
-#X obj 605 1060 *~;
-#X obj 760 990 r \$1-outputgain;
-#X msg 760 1013 \$1 20;
-#X obj 760 1037 vline~;
-#X obj 745 1061 *~;
-#X obj 900 990 r \$1-outputgain;
-#X msg 900 1013 \$1 20;
-#X obj 900 1037 vline~;
-#X obj 885 1061 *~;
-#X obj 1036 992 r \$1-outputgain;
-#X msg 1036 1015 \$1 20;
-#X obj 1036 1039 vline~;
-#X obj 1021 1063 *~;
+#X obj 38 1143 r \$1-outputgain;
+#X msg 38 1166 \$1 20;
+#X obj 38 1190 vline~;
+#X obj 23 1214 *~;
+#X obj 186 1144 r \$1-outputgain;
+#X msg 186 1167 \$1 20;
+#X obj 186 1191 vline~;
+#X obj 171 1215 *~;
+#X obj 334 1143 r \$1-outputgain;
+#X msg 334 1166 \$1 20;
+#X obj 334 1190 vline~;
+#X obj 319 1214 *~;
+#X obj 475 1145 r \$1-outputgain;
+#X msg 475 1168 \$1 20;
+#X obj 475 1192 vline~;
+#X obj 460 1216 *~;
+#X obj 619 1141 r \$1-outputgain;
+#X msg 619 1164 \$1 20;
+#X obj 619 1188 vline~;
+#X obj 604 1212 *~;
+#X obj 759 1142 r \$1-outputgain;
+#X msg 759 1165 \$1 20;
+#X obj 759 1189 vline~;
+#X obj 744 1213 *~;
+#X obj 899 1142 r \$1-outputgain;
+#X msg 899 1165 \$1 20;
+#X obj 899 1189 vline~;
+#X obj 884 1213 *~;
+#X obj 1035 1144 r \$1-outputgain;
+#X msg 1035 1167 \$1 20;
+#X obj 1035 1191 vline~;
+#X obj 1020 1215 *~;
 #X obj 1284 127 gemhead;
 #X obj 1284 174 translateXYZ -1.4 2.4 0;
 #X obj 1284 200 rectangle 0.17 0.17;
@@ -339,8 +339,133 @@ will cause Pure Data to consume all of your CPU.;
 #X obj 1543 -61 *~ 0.5;
 #X obj 1630 -61 *~ 0.5;
 #X obj 146 -111 oscinteraction \$1;
-#X obj 220 245 r \$1-xy;
-#X msg 220 267 values \$2 \$1;
+#X obj 316 244 r \$1-xy;
+#X msg 316 266 values \$2 \$1;
+#X obj 203 1013 s \$1-gridout;
+#X msg 862 952 9000;
+#X obj 862 976 s \$1-setport;
+#X msg 862 1000 0;
+#X obj 862 1024 s \$1-setlocalhost;
+#X obj 424 624 cnv 15 370 50 empty empty Outgoing_OSC 5 12 0 14 -191407
+-66577 0;
+#X obj 112 623 cnv 15 300 50 empty empty Automation 5 12 0 14 -191407
+-66577 0;
+#X floatatom 451 651 3 0 999 0 IP: #1-setip1 #1-ip1;
+#X floatatom 482 651 3 0 999 0 . #1-setip2 #1-ip2;
+#X floatatom 513 651 3 0 999 0 . #1-setip3 #1-ip3;
+#X floatatom 544 651 3 0 999 0 . #1-setip4 #1-ip4;
+#X floatatom 601 651 4 0 0 0 Port: #1-setport #1-port;
+#X obj 702 652 tgl 15 0 \$1-localhost \$1-setlocalhost Local_Host:
+-70 7 0 10 -262144 -1 -1 0 1;
+#X obj 773 652 tgl 15 0 \$1-connectosc \$1-setconnectosc Connect: -52
+7 0 10 -262144 -1 -1 0 1;
+#X obj 1448 955 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1467 955 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 1448 1003 5 0 0 0 - - -;
+#X floatatom 1383 861 5 0 0 0 - - -;
+#X obj 1276 986 metro 50;
+#X obj 1276 1014 float;
+#X obj 1325 1014 + 1;
+#X obj 1448 927 sel 1 0;
+#X obj 1276 1062 mod;
+#X floatatom 1291 1043 5 0 0 0 - - -;
+#X floatatom 1276 1091 5 0 0 0 - - -;
+#X obj 1383 784 metro 50;
+#X obj 1383 816 float;
+#X obj 1432 816 + 1;
+#X obj 1383 839 mod 72000;
+#X obj 1362 962 sel 1;
+#X msg 1278 654 0;
+#X floatatom 1276 1137 5 0 0 0 - - -;
+#N canvas 757 173 436 180 array 0;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$1-looperx 72000 float 2;
+#X coords 0 1 71999 -1 200 140 1;
+#X restore 12 21 graph;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$1-loopery 72000 float 2;
+#X coords 0 1 71999 -1 200 140 1 0 0;
+#X restore 223 21 graph;
+#X restore 1055 624 pd array;
+#X floatatom 1278 838 5 0 0 0 - - -;
+#X obj 1448 974 realtime;
+#X msg 1362 985 0;
+#X obj 1278 631 sel 1 0;
+#X msg 1413 744 0;
+#X msg 1383 744 1;
+#X obj 1383 765 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X msg 1325 773 0;
+#X obj 1413 721 del 3000;
+#X obj 1278 565 r \$1-gridout;
+#X obj 1278 587 unpack f f;
+#X obj 1278 610 r \$1-rec;
+#X obj 1278 884 tabwrite \$1-looperx;
+#X obj 1278 678 s \$1-setplay;
+#X obj 1276 916 r \$1-play;
+#X obj 1448 905 r \$1-rec;
+#X obj 1362 1009 s \$1-setrec;
+#X obj 1276 1113 tabread \$1-looperx;
+#X obj 1276 1214 pack f f;
+#X obj 1276 1237 s \$1-automation;
+#X obj 166 651 tgl 15 0 \$1-rec \$1-setrec Record: -46 7 0 10 -262144
+-1 -1 0 1;
+#X obj 230 651 tgl 15 0 \$1-play \$1-setplay Play: -34 7 0 10 -262144
+-1 -1 0 1;
+#X obj 210 244 r \$1-automation;
+#X obj 1684 957 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1703 957 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 1684 1005 5 0 0 0 - - -;
+#X floatatom 1621 859 5 0 0 0 - - -;
+#X obj 1512 988 metro 50;
+#X obj 1512 1016 float;
+#X obj 1561 1016 + 1;
+#X obj 1684 929 sel 1 0;
+#X obj 1512 1064 mod;
+#X floatatom 1527 1045 5 0 0 0 - - -;
+#X floatatom 1512 1093 5 0 0 0 - - -;
+#X obj 1621 782 metro 50;
+#X obj 1621 814 float;
+#X obj 1670 814 + 1;
+#X obj 1621 837 mod 72000;
+#X obj 1598 964 sel 1;
+#X floatatom 1512 1139 5 0 0 0 - - -;
+#X floatatom 1516 836 5 0 0 0 - - -;
+#X obj 1684 976 realtime;
+#X msg 1598 987 0;
+#X obj 1516 629 sel 1 0;
+#X msg 1651 742 0;
+#X msg 1621 742 1;
+#X obj 1621 763 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X msg 1563 771 0;
+#X obj 1651 719 del 3000;
+#X obj 1516 608 r \$1-rec;
+#X obj 1512 917 r \$1-play;
+#X obj 1684 907 r \$1-rec;
+#X obj 1516 882 tabwrite \$1-loopery;
+#X obj 1512 1115 tabread \$1-loopery;
+#X obj 1379 1159 t b;
+#X obj 269 651 hsl 128 15 200 20 1 0 \$1-autospeed \$1-setautospeed
+Playback_Speed: -2 -8 0 10 -262144 -1 -1 7646 1;
+#X obj 1321 939 r \$1-autospeed;
+#X obj 1557 941 r \$1-autospeed;
+#X msg 862 1047 50;
+#X obj 862 1072 s \$1-setautospeed;
+#X obj 1448 1027 / 50;
+#X obj 1684 1029 / 50;
+#X floatatom 1321 965 5 0 0 0 - - -;
+#X floatatom 1557 966 5 0 0 0 - - -;
+#X msg 1278 700 50;
+#X obj 1278 725 s \$1-setautospeed;
+#X msg 1413 663 const 0;
+#X obj 1413 690 s \$1-looperx;
+#X msg 1650 666 const 0;
+#X obj 1650 693 s \$1-loopery;
 #X connect 1 0 14 0;
 #X connect 2 0 16 0;
 #X connect 2 1 24 0;
@@ -375,6 +500,7 @@ will cause Pure Data to consume all of your CPU.;
 #X connect 14 0 2 0;
 #X connect 17 0 23 0;
 #X connect 19 0 17 0;
+#X connect 19 0 308 0;
 #X connect 20 0 18 0;
 #X connect 21 0 45 0;
 #X connect 22 0 20 0;
@@ -464,6 +590,9 @@ will cause Pure Data to consume all of your CPU.;
 #X connect 171 0 11 0;
 #X connect 171 0 217 0;
 #X connect 171 0 284 0;
+#X connect 171 0 309 0;
+#X connect 171 0 311 0;
+#X connect 171 0 399 0;
 #X connect 185 0 0 0;
 #X connect 186 0 0 0;
 #X connect 187 0 0 0;
@@ -570,4 +699,105 @@ will cause Pure Data to consume all of your CPU.;
 #X connect 304 0 101 0;
 #X connect 306 0 307 0;
 #X connect 307 0 122 0;
-#X coords 0 -1 1 1 704 324 1 100 300;
+#X connect 309 0 310 0;
+#X connect 311 0 312 0;
+#X connect 322 0 342 0;
+#X connect 323 0 342 1;
+#X connect 324 0 401 0;
+#X connect 325 0 353 1;
+#X connect 326 0 327 0;
+#X connect 327 0 328 0;
+#X connect 327 0 330 0;
+#X connect 328 0 327 1;
+#X connect 329 0 322 0;
+#X connect 329 1 323 0;
+#X connect 330 0 332 0;
+#X connect 331 0 330 1;
+#X connect 332 0 358 0;
+#X connect 333 0 334 0;
+#X connect 333 0 341 0;
+#X connect 334 0 335 0;
+#X connect 334 0 336 0;
+#X connect 335 0 334 1;
+#X connect 336 0 325 0;
+#X connect 337 0 343 0;
+#X connect 338 0 354 0;
+#X connect 339 0 359 0;
+#X connect 341 0 353 0;
+#X connect 342 0 324 0;
+#X connect 343 0 327 0;
+#X connect 343 0 357 0;
+#X connect 344 0 338 0;
+#X connect 344 0 346 0;
+#X connect 344 0 348 0;
+#X connect 344 0 341 0;
+#X connect 344 0 405 0;
+#X connect 344 0 407 0;
+#X connect 344 1 349 0;
+#X connect 345 0 347 0;
+#X connect 346 0 347 0;
+#X connect 347 0 333 0;
+#X connect 348 0 334 0;
+#X connect 349 0 345 0;
+#X connect 350 0 351 0;
+#X connect 351 0 341 0;
+#X connect 351 1 381 0;
+#X connect 352 0 344 0;
+#X connect 355 0 326 0;
+#X connect 355 0 337 0;
+#X connect 356 0 329 0;
+#X connect 358 0 339 0;
+#X connect 359 0 360 0;
+#X connect 363 0 120 0;
+#X connect 364 0 382 0;
+#X connect 365 0 382 1;
+#X connect 366 0 402 0;
+#X connect 367 0 393 1;
+#X connect 368 0 369 0;
+#X connect 369 0 370 0;
+#X connect 369 0 372 0;
+#X connect 370 0 369 1;
+#X connect 371 0 364 0;
+#X connect 371 1 365 0;
+#X connect 372 0 374 0;
+#X connect 373 0 372 1;
+#X connect 374 0 394 0;
+#X connect 375 0 376 0;
+#X connect 375 0 381 0;
+#X connect 376 0 377 0;
+#X connect 376 0 378 0;
+#X connect 377 0 376 1;
+#X connect 378 0 367 0;
+#X connect 379 0 383 0;
+#X connect 380 0 359 1;
+#X connect 380 0 395 0;
+#X connect 381 0 393 0;
+#X connect 382 0 366 0;
+#X connect 383 0 369 0;
+#X connect 384 0 386 0;
+#X connect 384 0 388 0;
+#X connect 384 0 381 0;
+#X connect 384 0 409 0;
+#X connect 384 1 389 0;
+#X connect 385 0 387 0;
+#X connect 386 0 387 0;
+#X connect 387 0 375 0;
+#X connect 388 0 376 0;
+#X connect 389 0 385 0;
+#X connect 390 0 384 0;
+#X connect 391 0 368 0;
+#X connect 391 0 379 0;
+#X connect 392 0 371 0;
+#X connect 394 0 380 0;
+#X connect 395 0 339 0;
+#X connect 397 0 403 0;
+#X connect 398 0 404 0;
+#X connect 399 0 400 0;
+#X connect 401 0 331 0;
+#X connect 402 0 373 0;
+#X connect 403 0 326 1;
+#X connect 404 0 368 1;
+#X connect 405 0 406 0;
+#X connect 407 0 408 0;
+#X connect 409 0 410 0;
+#X coords 0 -1 1 1 704 384 1 100 300;

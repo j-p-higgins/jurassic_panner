@@ -1,7 +1,7 @@
 #N canvas 671 299 1296 684 10;
 #X declare -path boids;
 #X obj 171 225 jurassic_panner mypan;
-#X obj 199 598 dac~;
+#X obj 197 628 dac~;
 #X obj 18 58 osc~ 440;
 #X obj 80 59 osc~ 220;
 #X obj 142 61 osc~ 442;
